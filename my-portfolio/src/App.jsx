@@ -3,6 +3,7 @@ import FadeContent from './components/ui/FadeContent'
 import LightRays from './components/ui/LightRays'
 import { DockNavbar } from './components/DockNavbar'
 import { TooltipProvider } from './components/ui/tooltip'
+import About from './components/About'
 
 export default function App() {
   return (
@@ -37,6 +38,7 @@ export function AppContent() {
         <div className="w-full max-w-2xl mx-auto flex flex-col gap-12 text-left">
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
             <Hero />
+            <About />
           </FadeContent>
           <DockNavbar />
         </div>
