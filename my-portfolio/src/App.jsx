@@ -1,7 +1,7 @@
 import Hero from './components/Hero'
 import FadeContent from './components/ui/FadeContent'
 import LightRays from './components/ui/LightRays'
-import { DockDemo } from './components/DockNavbar'
+import { DockNavbar } from './components/DockNavbar'
 import { TooltipProvider } from './components/ui/tooltip'
 
 export default function App() {
@@ -39,7 +39,7 @@ export function AppContent() {
             <Hero />
           </FadeContent>
           {/* Add more sections here later */}
-          <DockDemo className="flex justify-center" />
+          <DockNavbar className="flex justify-center" />
         </div>
       </div>
     </main>
