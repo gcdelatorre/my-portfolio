@@ -38,8 +38,7 @@ export function AppContent() {
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
             <Hero />
           </FadeContent>
-          {/* Add more sections here later */}
-          <DockNavbar className="flex justify-center" />
+          <DockNavbar />
         </div>
       </div>
     </main>

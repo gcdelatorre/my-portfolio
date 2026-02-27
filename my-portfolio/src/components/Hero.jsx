@@ -6,7 +6,7 @@ export default function () {
 
     return (
         <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-6 w-full">
-            <div className="relative flex-shrink-0 w-28 h-28 rounded-full border-3 border-white/20 overflow-hidden bg-white/5">
+            <div className="relative flex-shrink-0 w-28 h-28 rounded-full border-3 border-foreground/20 overflow-hidden bg-white/5">
                 <img
                     src={profile}
                     alt="Gian Dela Torre profile"
@@ -15,12 +15,12 @@ export default function () {
                 />
             </div>
             <div className="flex flex-col justify-center text-center md:text-left">
-                <h1 className="text-4xl md:text-5xl tracking-tight text-white leading-tight font-clash font-semibold">
+                <h1 className="text-4xl md:text-5xl tracking-tight text-primary leading-tight font-clash font-semibold">
                     Gian Dela Torre
                 </h1>
                 <WordRotate
                     words={words}
-                    className="text-sm md:text-[15px] text-muted-foreground tracking-wider font-sans"
+                    className="text-sm md:text-[15px] text-muted-foreground tracking-wider font-sans pl-1"
                 />
             </div>
         </div>

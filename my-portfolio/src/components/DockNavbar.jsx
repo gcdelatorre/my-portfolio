@@ -45,14 +45,14 @@ export function DockNavbar({ className }) {
     ]
 
     return (
-        <Dock className={cn("fixed bottom-10 left-1/2 -translate-x-1/2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-2 py-1 flex items-center gap-1", className)}>
+        <Dock className={cn("fixed bottom-10 left-1/2 -translate-x-1/2 bg-background/90 backdrop-blur-md border border-border rounded-full px-2 py-1 flex items-center gap-1 shadow-2xl", className)}>
             {/* Main Navigation */}
             {navItems.map((item) => (
                 <Tooltip key={item.label}>
                     <TooltipTrigger asChild>
                         <a href={item.href} className="group flex items-center justify-center">
-                            <DockIcon className="flex items-center justify-center rounded-full hover:bg-white/10 transition-colors p-2">
-                                <item.icon className="size-5 text-white/70 group-hover:text-white transition-colors" />
+                            <DockIcon className="flex items-center justify-center rounded-full hover:bg-primary/10 transition-colors p-2">
+                                <item.icon className="size-5 text-primary/90 group-hover:text-primary transition-colors" />
                             </DockIcon>
                         </a>
                     </TooltipTrigger>
@@ -62,15 +62,15 @@ export function DockNavbar({ className }) {
                 </Tooltip>
             ))}
 
-            <div className="w-[1px] h-6 bg-white/10 mx-1" />
+            <div className="w-[1px] h-6 bg-border mx-1" />
 
             {/* Social Links */}
             {socialItems.map((item) => (
                 <Tooltip key={item.label}>
                     <TooltipTrigger asChild>
                         <a href={item.href} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center">
-                            <DockIcon className="flex items-center justify-center rounded-full hover:bg-white/10 transition-colors p-2">
-                                <item.icon className="size-5 text-white/70 group-hover:text-white transition-colors" />
+                            <DockIcon className="flex items-center justify-center rounded-full hover:bg-primary/10 transition-colors p-2">
+                                <item.icon className="size-5 text-primary/90 group-hover:text-primary transition-colors" />
                             </DockIcon>
                         </a>
                     </TooltipTrigger>
@@ -80,7 +80,7 @@ export function DockNavbar({ className }) {
                 </Tooltip>
             ))}
 
-            <div className="w-[1px] h-6 bg-white/10 mx-1" />
+            <div className="w-[1px] h-6 bg-border mx-1" />
 
             {/* Theme Toggle */}
             <Tooltip>
@@ -89,11 +89,11 @@ export function DockNavbar({ className }) {
                         onClick={toggleTheme}
                         className="group flex items-center justify-center transition-all active:scale-95"
                     >
-                        <DockIcon className="flex items-center justify-center rounded-full hover:bg-white/10 transition-colors p-2">
+                        <DockIcon className="flex items-center justify-center rounded-full hover:bg-primary/10 transition-colors p-2">
                             {isDarkMode ? (
-                                <Sun className="size-5 text-yellow-400 group-hover:text-yellow-300 transition-colors" />
+                                <Sun className="size-5 text-yellow-500 group-hover:text-yellow-400 transition-colors" />
                             ) : (
-                                <Moon className="size-5 text-white/70 group-hover:text-white transition-colors" />
+                                <Moon className="size-5 text-primary/90 group-hover:text-primary transition-colors" />
                             )}
                         </DockIcon>
                     </button>

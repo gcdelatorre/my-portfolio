@@ -5,7 +5,7 @@ import { cn } from "../../lib/utils"
 
 export function WordRotate({
   words,
-  duration = 3000,
+  duration = 2000,
 
   motionProps = {
     initial: { opacity: 0, y: -25 },
