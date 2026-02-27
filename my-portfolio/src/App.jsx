@@ -6,6 +6,7 @@ import About from './components/About'
 import Beams from './components/ui/Beams'
 import LiquidEther from './components/ui/LiquidEther'
 import { ThemeProvider, useTheme } from './contexts/theme-provider'
+import Skills from './components/Skills'
 
 export default function App() {
   return (
@@ -59,6 +60,7 @@ export function AppContent() {
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
             <Hero />
             <About />
+            <Skills />
           </FadeContent>
           <DockNavbar />
         </div>
