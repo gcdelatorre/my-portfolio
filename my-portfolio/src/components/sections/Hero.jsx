@@ -6,11 +6,11 @@ export default function () {
 
     return (
         <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-6 w-full">
-            <div className="relative flex-shrink-0 w-28 h-28 rounded-full border-3 border-foreground/20 overflow-hidden bg-white/5">
+            <div className="relative flex-shrink-0 w-28 h-28 rounded-full border-3 border-foreground/50 overflow-hidden bg-white/5">
                 <img
                     src={profile}
                     alt="Gian Dela Torre profile"
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                     loading="lazy"
                 />
             </div>
