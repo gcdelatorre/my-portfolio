@@ -1,4 +1,4 @@
-import { WordRotate } from "./ui/word-rotate"
+import { WordRotate } from "@/components/ui/word-rotate"
 import profile from "@/assets/my-photo.jpg"
 
 export default function () {
