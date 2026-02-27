@@ -6,7 +6,7 @@ import {
 } from "./ui/tooltip"
 import { Dock, DockIcon } from "./ui/dock"
 import { cn } from "@/lib/utils"
-import { useState, useEffect } from "react"
+import { useTheme } from "@/contexts/theme-provider"
 
 const Icons = {
     linkedin: (props) => (
@@ -17,20 +17,11 @@ const Icons = {
 }
 
 export function DockNavbar({ className }) {
-    const [isDarkMode, setIsDarkMode] = useState(true)
-
-    useEffect(() => {
-        setIsDarkMode(document.documentElement.classList.contains('dark'))
-    }, [])
+    const { theme, setTheme } = useTheme()
+    const isDarkMode = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches)
 
     const toggleTheme = () => {
-        const newMode = !isDarkMode
-        setIsDarkMode(newMode)
-        if (newMode) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
+        setTheme(isDarkMode ? "light" : "dark")
     }
 
     const navItems = [
