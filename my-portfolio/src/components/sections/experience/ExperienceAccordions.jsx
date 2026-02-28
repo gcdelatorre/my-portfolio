@@ -1,7 +1,6 @@
 import {
     Card,
 } from "@/components/ui/card"
-import catgif from '@/assets/catgif.gif'
 import {
     Accordion,
     AccordionContent,
@@ -12,44 +11,7 @@ import { ChevronDown } from "lucide-react"
 import { AnimatedContents } from "@/components/animations/AnimatedContents"
 import { useState } from "react"
 
-const experiences = [
-    {
-        title: "Easy Trip",
-        about: "AI Travel Planner",
-        period: "Jan 2026 - Feb 2026",
-        description: "Developed an application that helps user plan their trip without a hassle. Currently has 450+ registered users and 70+ active users.",
-        projectDescription: "Trip planning is often overwhelming and time-consuming. Most travelers spend hours switching between blogs, maps, and scattered notes that never turn into a clear plan. I built Easy Trip to remove that friction. The platform generates a complete, personalized day-by-day travel itinerary in seconds based on user preferences, helping travelers move from “idea” to “ready-to-go plan” instantly.",
-        details: [
-            "Saves travelers hours of planning by generating complete itineraries instantly.",
-            "Reduces overwhelm by turning scattered travel ideas into clear daily plans.",
-            "Keeps trip details organized in one place for easy access anytime.",
-            "Supports real travel needs with map visualization and offline-ready plans.",
-            "Makes travel planning accessible for solo travelers, families, and groups."
-        ],
-        image: catgif,
-        liveApp: "https://ec-trip.vercel.app/",
-        techStack: ["React", "Express", "Node", "MongoDB", "Tailwind CSS", "JWT", "Google OAuth", "Leaflet", "OpenStreetMap"],
-        type: "Website"
-    },
-    {
-        title: "Trackwise",
-        about: "Expense Tracker with AI",
-        period: "Aug 2025 - Dec 2025",
-        description: "Built an AI-powered expense tracker that helps users track their expenses and income effortlessly by having automatic categorization of transactions.",
-        projectDescription: "Tracking expenses manually is a hassle, and most people lose track of where their money goes. Trackwise solves this by leveraging AI to automatically categorize transactions from receipt photos, giving users real-time insights into their spending habits without the manual data entry.",
-        details: [
-            "Eliminates manual expense logging by extracting data directly from receipt photos.",
-            "Saves time by turning unstructured receipts into organized expense records instantly.",
-            "Reduces errors in tracking spending through automated data capture.",
-            "Helps users understand spending patterns with searchable, structured records.",
-            "Keeps financial information secure with protected user accounts and safe data handling."
-        ],
-        image: catgif,
-        liveApp: "https://smart-trackwise.vercel.app/",
-        techStack: ["React", "Express", "Node", "MongoDB", "Tailwind CSS", "Generative AI", "JWT"],
-        type: "Website"
-    }
-]
+import experiences from "@/constants/experiences"
 
 export function ExperienceAccordions() {
     const [openItem, setOpenItem] = useState(null);
@@ -70,13 +32,21 @@ export function ExperienceAccordions() {
                                 <div className="flex flex-col md:flex-row gap-6 w-full">
                                     {/* Image Container */}
                                     <div className="w-full md:w-60 h-48 md:h-40 bg-muted/20 rounded-lg relative flex-shrink-0 border border-border/50 overflow-hidden">
+                                        <span className="flex items-center gap-1.5 absolute top-2 right-2 px-2.5 py-1 bg-black/80 backdrop-blur-md border border-white/10 rounded-md text-[10px] font-sans font-bold text-white z-10 uppercase">
+                                            <div className="flex items-center space-x-1.5">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-globe opacity-90"><circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /><path d="M2 12h20" /></svg>
+                                                <span className="leading-none transform translate-y-[0.5px]">{exp.type}</span>
+                                            </div>
+                                        </span>
                                         <div className="w-full h-full" onClick={(e) => e.stopPropagation()}>
                                             <a href={exp.liveApp} target="_blank" rel="noopener noreferrer">
-                                                <img
+                                                <video
                                                     src={exp.image}
-                                                    alt={exp.title}
+                                                    autoPlay
+                                                    loop
+                                                    muted
+                                                    playsInline
                                                     className="w-full h-full object-cover transition-transform duration-500 group-data-[state=open]:scale-105"
-                                                    loading="lazy"
                                                 />
                                             </a>
                                         </div>
@@ -106,7 +76,7 @@ export function ExperienceAccordions() {
                                 </div>
                             </AccordionTrigger>
                             <AccordionContent className="px-4 pb-0">
-                                <AnimatedContents active={isOpen} reverse={true}>
+                                <AnimatedContents active={isOpen} reverse={false}>
                                     <div className="pt-4 border-t border-border/20 space-y-6">
                                         {/* About the Project */}
                                         <div className="space-y-2">
