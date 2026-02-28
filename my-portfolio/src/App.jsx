@@ -7,6 +7,7 @@ import Hero from '@/components/sections/Hero'
 import FadeContent from '@/components/ui/FadeContent'
 import About from '@/components/sections/About'
 import Skills from '@/components/sections/Skills'
+import Experience from '@/components/sections/Experience'
 
 export default function App() {
   return (
@@ -23,7 +24,7 @@ export function AppContent() {
 
   return (
     <main className="relative min-h-screen w-full ">
-      <div className="absolute inset-0 z-0 h-screen w-full pointer-events-none opacity-50">
+      <div className="fixed inset-0 z-0 pointer-events-none opacity-50">
         {theme === "light" && <LiquidEtherBackground />}
         {theme === "dark" && <BeamsBackground />}
       </div>
@@ -32,6 +33,7 @@ export function AppContent() {
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
             <Hero />
             <About />
+            <Experience />
             <Skills />
           </FadeContent>
           <DockNavbar />
