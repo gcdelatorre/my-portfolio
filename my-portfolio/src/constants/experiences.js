@@ -1,5 +1,5 @@
-import ectrip from '@/assets/ectrip-recording.mp4'
-import trackwise from '@/assets/trackwise-recording.mp4'
+import ectrip from '@/assets/ectrip.mp4'
+import trackwise from '@/assets/trackwise.mp4'
 
 const experiences = [
     {
