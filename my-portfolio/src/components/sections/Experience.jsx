@@ -12,17 +12,19 @@ import catgif from '@/assets/catgif.gif'
 const experiences = [
     {
         title: "Easy Trip",
-        about: "Web Application - AI Travel Planner",
-        period: "2026",
-        description: "Deployed production-ready application currently used by 450+ travelers.",
-        image: catgif
+        about: "AI Travel Planner",
+        period: "Jan 2026 - Feb 2026",
+        description: "Developed an application that helps user plan their trip without a hassle. Currently has 450+ registered users and 100+ active users.",
+        image: catgif,
+        liveApp: "https://ec-trip.vercel.app/"
     },
     {
         title: "Trackwise",
-        about: "Web Application - Expense Tracker with AI",
-        period: "2025",
-        description: "Built an AI-powered expense tracker that helps users track their expenses and save money effortlessly.",
-        image: catgif
+        about: "Expense Tracker with AI",
+        period: "Aug 2025 - Dec 2025",
+        description: "Built an AI-powered expense tracker that helps users track their expenses and income effortlessly by having automatic categorization of transactions.",
+        image: catgif,
+        liveApp: "https://smart-trackwise.vercel.app/"
     }
 ]
 
@@ -48,15 +50,15 @@ export default function Experience() {
                             <div className="flex flex-col flex-1 py-1">
                                 <div className="flex justify-between items-start w-full mb-2">
                                     <div>
-                                        <h3 className="text-xl text-primary font-clash leading-none mb-2">{exp.title}</h3>
-                                        <p className="text-sm md:text-[14px] text-foreground/70 font-sans">{exp.about}</p>
+                                        <h3 className="text-xl text-primary font-sans font-[700] leading-none mb-2">{exp.title}</h3>
+                                        <p className="text-sm md:text-[14px] text-foreground/80 font-sans">{exp.about}</p>
                                     </div>
                                     <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold font-sans uppercase tracking-wider">
                                         {exp.period}
                                     </div>
                                 </div>
 
-                                <p className="text-sm md:text-[15px] text-foreground/90 tracking-wide font-sans font-[400] leading-relaxed mb-4">
+                                <p className="text-sm md:text-[14px] text-foreground/80 tracking-wide font-sans font-[400] leading-relaxed mb-4">
                                     {exp.description}
                                 </p>
                             </div>
