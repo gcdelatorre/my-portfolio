@@ -3,7 +3,7 @@ import LiquidEther from "@/components/ui/LiquidEther"
 export function LiquidEtherBackground() {
     return (
         <LiquidEther
-            colors={['#310092ff', '#ffffffff', '#006affff']}
+            colors={['#332945', '#000000', '#2b1a4d']}
             mouseForce={10}
             cursorSize={75}
             isViscous
@@ -18,9 +18,9 @@ export function LiquidEtherBackground() {
             takeoverDuration={0.25}
             autoResumeDelay={3000}
             autoRampDuration={0.6}
-            color0="#272629ff"
-            color1="#ffffffff"
-            color2="#006affff"
+            color0="#332945"
+            color1="#000000"
+            color2="#2b1a4d"
         />
     )
 }
