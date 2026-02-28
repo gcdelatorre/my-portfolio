@@ -6,7 +6,7 @@ export function AnimatedContents({ children, reverse = false, active }) {
             distance={100}
             direction="vertical"
             reverse={reverse}
-            duration={0.5}
+            duration={1}
             ease="power3.out"
             initialOpacity={0}
             animateOpacity

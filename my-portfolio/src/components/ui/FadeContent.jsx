@@ -8,7 +8,7 @@ const FadeContent = ({
   children,
   container,
   blur = false,
-  duration = 1,
+  duration = 1.5,
   ease = 'power2.out',
   delay = 0,
   threshold = 0.1,

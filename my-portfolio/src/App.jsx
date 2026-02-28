@@ -30,7 +30,7 @@ export function AppContent() {
       </div>
       <div className="relative z-10 flex flex-col items-center justify-start min-h-screen w-full py-10">
         <div className="w-full max-w-2xl mx-auto flex flex-col gap-12 text-left">
-          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+          <FadeContent blur={true} duration={1500} easing="ease-out" initialOpacity={0}>
             <Hero />
             <About />
             <Experience />
@@ -39,6 +39,6 @@ export function AppContent() {
           <DockNavbar />
         </div>
       </div>
-    </main>
+    </main >
   )
 }
