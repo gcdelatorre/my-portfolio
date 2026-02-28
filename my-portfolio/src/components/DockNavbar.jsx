@@ -36,7 +36,7 @@ export function DockNavbar({ className }) {
     ]
 
     return (
-        <Dock className={cn("fixed bottom-10 left-1/2 -translate-x-1/2 bg-background/90 backdrop-blur-md border border-border rounded-full px-2 py-1 flex items-center gap-1 shadow-2xl", className)}>
+        <Dock className={cn("fixed bottom-10 left-1/2 -translate-x-1/2 bg-background/90 backdrop-blur-md border border-primary/30 rounded-full px-2 py-1 flex items-center gap-1 shadow-2xl", className)}>
             {/* Main Navigation */}
             {navItems.map((item) => (
                 <Tooltip key={item.label}>

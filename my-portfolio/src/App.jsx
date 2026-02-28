@@ -7,7 +7,7 @@ import Hero from '@/components/sections/Hero'
 import FadeContent from '@/components/ui/FadeContent'
 import About from '@/components/sections/About'
 import Skills from '@/components/sections/Skills'
-import Experience from '@/components/sections/Experience'
+import Experience from '@/components/sections/experience/Experience'
 
 export default function App() {
   return (
