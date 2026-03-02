@@ -53,7 +53,7 @@ export function DockNavbar({ className }) {
                 </Tooltip>
             ))}
 
-            <div className="w-[1px] h-6 bg-border mx-1" />
+            <div className="w-[1px] h-6 bg-primary/50 mx-1" />
 
             {/* Social Links */}
             {socialItems.map((item) => (
@@ -71,7 +71,7 @@ export function DockNavbar({ className }) {
                 </Tooltip>
             ))}
 
-            <div className="w-[1px] h-6 bg-border mx-1" />
+            <div className="w-[1px] h-6 bg-primary/50 mx-1" />
 
             {/* Theme Toggle */}
             <Tooltip>
