@@ -5,7 +5,7 @@ export default function () {
     const words = ["Fullstack Developer", "Web Developer", "Creating with code. Small details matter.", "Problem Solver"];
 
     return (
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-6 w-full">
+        <div className="flex flex-row items-center  gap-6 w-full">
             <div className="relative flex-shrink-0 w-28 h-28 rounded-full border-3 border-foreground/50 overflow-hidden bg-white/5">
                 <img
                     src={profile}
@@ -14,7 +14,7 @@ export default function () {
                     loading="lazy"
                 />
             </div>
-            <div className="flex flex-col justify-center text-center md:text-left">
+            <div className="flex flex-col justify-center text-start md:text-left">
                 <h1 className="text-4xl md:text-5xl tracking-tight text-primary leading-tight font-clash font-semibold">
                     Gian Dela Torre
                 </h1>

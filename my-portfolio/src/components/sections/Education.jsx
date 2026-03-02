@@ -38,14 +38,14 @@ export default function Education() {
 
                             <div className="flex flex-col flex-1 justify-center min-w-0">
                                 <div className="flex justify-between items-center w-full mb-0">
-                                    <h3 className="text-[15px] md:text-lg text-primary font-sans font-[700] leading-tight truncate">{edu.school}</h3>
+                                    <h3 className="text-[15px] md:text-lg text-primary font-sans font-[700] leading-tight">{edu.school}</h3>
                                     <div className="bg-primary/10 text-primary px-2.5 py-1 rounded-full text-[9px] font-bold font-sans uppercase tracking-wider shrink-0">
                                         {edu.period}
                                     </div>
                                 </div>
 
                                 <p className="text-[13px] md:text-sm text-foreground/90 font-medium font-sans leading-tight mt-0.5">{edu.degree}</p>
-                                <p className="text-[11px] text-foreground/50 font-sans mt-1 line-clamp-1">{edu.description}</p>
+                                <p className="text-[11px] text-foreground/50 font-sans mt-1 line-clamp-2">{edu.description}</p>
                             </div>
                         </div>
                     </Card>

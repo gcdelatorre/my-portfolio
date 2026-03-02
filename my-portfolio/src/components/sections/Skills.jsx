@@ -120,7 +120,7 @@ export default function Skills() {
                         className="bg-primary/5 hover:bg-primary/10 text-primary border-primary/10 py-2 px-5 flex items-center justify-center gap-3 transition-all cursor-default"
                     >
                         {skill.icon}
-                        <span className="text-sm font-sans font-bold">{skill.name}</span>
+                        <span className="text-xs md:text-[15px] font-sans font-bold">{skill.name}</span>
                     </Badge>
                 ))}
             </div>

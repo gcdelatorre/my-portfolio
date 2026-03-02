@@ -25,7 +25,7 @@ export function AppContent() {
   const { theme } = useTheme()
 
   return (
-    <main className="relative min-h-screen w-full pb-24">
+    <main className="relative min-h-screen w-full pb-24 px-4 md:px-6">
       <div className="fixed inset-0 z-0 pointer-events-none opacity-50">
         {theme === "light" && <LiquidEtherBackground />}
         {theme === "dark" && <BeamsBackground />}
