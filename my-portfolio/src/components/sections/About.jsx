@@ -5,7 +5,7 @@ export default function About() {
 
             <div className="flex flex-col gap-6 max-w-4xl">
                 <p className="text-sm md:text-[16px] text-foreground/80 tracking-wide font-sans font-[400] leading-relaxed">
-                    I’m a BSIT student and <span className="text-primary font-semibold">full-stack developer</span> who builds <span className="text-foreground font-semibold">scalable, database-driven web applications</span>.
+                    I’m a BSIT student and aspiring <span className="text-primary font-semibold">full-stack developer</span> who builds <span className="text-foreground font-semibold">scalable, database-driven web applications</span>.
                     I focus on <span className="text-foreground font-semibold">creating systems that solve real problems</span> and enjoy <span className="text-foreground font-semibold">tackling complex challenges</span>.
                     I am eager to learn new technologies and continuously improve my skills.
                 </p>

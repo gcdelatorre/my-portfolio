@@ -8,6 +8,7 @@ import FadeContent from '@/components/ui/FadeContent'
 import About from '@/components/sections/About'
 import Skills from '@/components/sections/Skills'
 import Experience from '@/components/sections/experience/Experience'
+import Education from '@/components/sections/Education'
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export function AppContent() {
             <Hero />
             <About />
             <Experience />
+            <Education />
             <Skills />
           </FadeContent>
           <DockNavbar />

@@ -31,7 +31,7 @@ export function ExperienceAccordions() {
                             <AccordionTrigger className="w-full px-4 py-0 text-left hover:no-underline group focus-visible:ring-0 [&>svg]:hidden">
                                 <div className="flex flex-col md:flex-row gap-6 w-full">
                                     {/* Image Container */}
-                                    <div className="w-full md:w-72 h-50 md:h-42 bg-muted/20 rounded-lg relative flex-shrink-0 border border-border/50 overflow-hidden transition-all duration-300 ease-out hover:scale-115 hover:z-50 hover:shadow-xl hover:border-primary/50 group/video">
+                                    <div className="w-full md:w-72 h-50 md:h-42 bg-muted/20 rounded-lg relative flex-shrink-0 border border-border/50 overflow-hidden transition-all duration-300 ease-out hover:scale-106 hover:z-50 hover:shadow-xl hover:border-primary/50 group/video">
                                         <span className="flex items-center gap-1.5 absolute top-2 right-2 px-2.5 py-1 bg-black/80 backdrop-blur-md border border-white/10 rounded-md text-[10px] font-sans font-bold text-white z-10 uppercase transition-opacity group-hover/video:opacity-0">
                                             <div className="flex items-center space-x-1.5">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-globe opacity-90"><circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /><path d="M2 12h20" /></svg>
@@ -68,7 +68,7 @@ export function ExperienceAccordions() {
                                             {exp.description}
                                         </p>
 
-                                        <div className="mt-auto flex items-center gap-2 text-xs font-bold text-primary/60 group-hover:text-primary transition-colors">
+                                        <div className="mt-auto flex items-center gap-2 text-xs font-bold text-primary/60 group-hover:text-primary transition-colors cursor-pointer">
                                             <span>{isOpen ? "Hide Project Details" : "View Project Details"}</span>
                                             <ChevronDown className="w-4 h-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                                         </div>
