@@ -28,7 +28,7 @@ export default function Education() {
                     <Card key={index} className="w-full p-3.5 bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/80 transition-all duration-300">
                         <div className="flex items-center gap-4">
                             {/* Logo Container */}
-                            <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 overflow-hidden p-2">
+                            <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-foreground/5 border border-foreground/30 flex items-center justify-center shrink-0 overflow-hidden p-2">
                                 {edu.logo ? (
                                     <img src={edu.logo} alt={edu.school} className="w-full h-full object-contain" />
                                 ) : (
