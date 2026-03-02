@@ -10,7 +10,7 @@ export default function () {
                 <img
                     src={profile}
                     alt="Gian Dela Torre profile"
-                    className="w-full h-full object-cover grayscale-50 hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover grayscale-20 md:grayscale-50 hover:grayscale-0 transition-all duration-1000"
                     loading="lazy"
                 />
             </div>
