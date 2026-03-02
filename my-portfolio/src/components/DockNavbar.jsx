@@ -1,4 +1,4 @@
-import { Home, Github, Facebook, Mail, Moon, Sun } from "lucide-react"
+import { Home, Github, Facebook, Mail, Moon, Sun, Download } from "lucide-react"
 import {
     Tooltip,
     TooltipContent,
@@ -26,6 +26,7 @@ export function DockNavbar({ className }) {
 
     const navItems = [
         { href: "#", icon: Home, label: "Home" },
+        { href: "/DELATORRE_GIANCARLO_RESUME.pdf", icon: Download, label: "Download CV", download: true },
     ]
 
     const socialItems = [
@@ -38,10 +39,14 @@ export function DockNavbar({ className }) {
     return (
         <Dock className={cn("fixed bottom-10 left-1/2 -translate-x-1/2 bg-background/90 backdrop-blur-md border border-primary/30 rounded-full px-2 py-1 flex items-center gap-1 shadow-2xl", className)}>
             {/* Main Navigation */}
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
                 <Tooltip key={item.label}>
                     <TooltipTrigger asChild>
-                        <a href={item.href} className="group flex items-center justify-center">
+                        <a
+                            href={item.href}
+                            className="group flex items-center justify-center"
+                            {...(item.download ? { download: "Gian_Dela_Torre_Resume.pdf", target: "_blank", rel: "noopener noreferrer" } : {})}
+                        >
                             <DockIcon className="flex items-center justify-center rounded-full hover:bg-primary/10 transition-colors p-2">
                                 <item.icon className="size-5 text-primary/90 group-hover:text-primary transition-colors" />
                             </DockIcon>

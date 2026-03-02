@@ -1,3 +1,5 @@
+import { Download } from "lucide-react"
+
 export default function About() {
     return (
         <div className="flex flex-col items-start justify-start gap-6 w-full pt-12">
@@ -14,6 +16,19 @@ export default function About() {
                     I also enjoy <span className="text-foreground font-semibold">designing reliable, production-ready applications</span>, understanding data flow, and turning complex workflows into <span className="text-primary font-semibold">intuitive user experiences</span>.
                     My goal is to <span className="text-foreground font-semibold">create software that is both functional and user-friendly</span>, while learning and growing as a developer along the way.
                 </p>
+
+                <div className="pt-2">
+                    <a
+                        href="/DELATORRE_GIANCARLO_RESUME.pdf"
+                        download="DELATORRE_GIANCARLO_RESUME.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-fit gap-2 px-6 py-2.5 text-sm font-sans font-bold text-background bg-primary hover:bg-primary/90 rounded-full transition-all active:scale-95 shadow-lg shadow-primary/20"
+                    >
+                        <Download className="w-4 h-4" />
+                        Download CV
+                    </a>
+                </div>
             </div>
         </div>
     )
