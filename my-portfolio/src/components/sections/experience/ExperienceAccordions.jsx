@@ -63,7 +63,7 @@ export function ExperienceAccordions() {
                                         <div className="flex justify-between items-start w-full mb-2">
                                             <div className="flex-1 min-w-0 pr-4">
                                                 <h3 className="text-xl text-primary font-sans font-[700] leading-none mb-2">{exp.title}</h3>
-                                                <p className="text-sm md:text-[14px] text-foreground/80 font-sans font-medium">{exp.about}</p>
+                                                <p className="text-sm md:text-[14px] text-foreground font-medium">{exp.about}</p>
                                             </div>
                                             <div className="flex flex-col items-end gap-2 shrink-0">
                                                 <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold font-sans uppercase tracking-wider">
@@ -110,7 +110,7 @@ export function ExperienceAccordions() {
                                             </div>
                                         </div>
 
-                                        <p className="text-sm md:text-[14px] text-foreground/80 tracking-wide font-sans font-[400] leading-relaxed mb-4">
+                                        <p className="text-sm md:text-[14px] text-foreground/90 tracking-wide font-sans font-[400] leading-relaxed mb-4">
                                             {exp.description}
                                         </p>
 
@@ -127,7 +127,7 @@ export function ExperienceAccordions() {
                                         {/* About the Project */}
                                         <div className="space-y-2">
                                             <h4 className="text-sm font-bold text-primary font-sans uppercase tracking-widest">About the Project</h4>
-                                            <p className="text-[13px] text-foreground/80 font-sans leading-relaxed">
+                                            <p className="text-[13px] text-foreground/90 font-sans leading-relaxed">
                                                 {exp.projectDescription}
                                             </p>
                                         </div>
@@ -149,7 +149,7 @@ export function ExperienceAccordions() {
                                             <h4 className="text-sm font-bold text-primary font-sans uppercase tracking-widest">Key Highlights</h4>
                                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-1">
                                                 {exp.details.map((detail, dIndex) => (
-                                                    <li key={dIndex} className="text-[13px] text-foreground/70 font-sans flex items-start gap-2 leading-relaxed">
+                                                    <li key={dIndex} className="text-[13px] text-foreground/90 font-sans flex items-start gap-2 leading-relaxed">
                                                         <div className="mt-1.5 h-1 w-1 rounded-full bg-primary/40 flex-shrink-0" />
                                                         {detail}
                                                     </li>

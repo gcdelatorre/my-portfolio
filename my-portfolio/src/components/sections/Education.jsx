@@ -44,8 +44,8 @@ export default function Education() {
                                     </div>
                                 </div>
 
-                                <p className="text-[13px] md:text-sm text-foreground/90 font-medium font-sans leading-tight mt-0.5">{edu.degree}</p>
-                                <p className="text-[11px] text-foreground/50 font-sans mt-1 line-clamp-2">{edu.description}</p>
+                                <p className="text-[13px] md:text-sm text-foreground font-medium font-sans leading-tight mt-0.5">{edu.degree}</p>
+                                <p className="text-[11px] text-foreground/80 font-sans mt-1 line-clamp-2">{edu.description}</p>
                             </div>
                         </div>
                     </Card>

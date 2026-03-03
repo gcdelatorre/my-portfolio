@@ -31,7 +31,7 @@ export default function Contact() {
 
                     {/* Content paragraph */}
                     <div className="w-full space-y-3">
-                        <p className="text-sm md:text-[17px] text-foreground/80 font-sans leading-relaxed tracking-wide">
+                        <p className="text-sm md:text-[17px] text-foreground/95 font-sans leading-relaxed tracking-wide">
                             I am currently open to new opportunities and collaborations.
                             Whether you have a project in mind or just want to say hi, feel free to reach out via{" "}
                             <a
