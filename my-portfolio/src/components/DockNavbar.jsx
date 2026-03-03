@@ -7,6 +7,7 @@ import {
 import { Dock, DockIcon } from "./ui/dock"
 import { cn } from "@/lib/utils"
 import { useTheme } from "@/contexts/theme-provider"
+import { buttonVariants } from "@/components/ui/button"
 
 const Icons = {
     linkedin: (props) => (
@@ -37,67 +38,84 @@ export function DockNavbar({ className }) {
     ]
 
     return (
-        <Dock className={cn("fixed bottom-10 left-1/2 -translate-x-1/2 bg-background/90 backdrop-blur-md border border-primary/30 rounded-full px-2 py-1 flex items-center gap-1 shadow-2xl", className)}>
+        <Dock direction="middle" iconMagnification={70} className={cn("fixed bottom-10 left-1/2 -translate-x-1/2 bg-background/90 backdrop-blur-md border border-primary/30 rounded-full px-2 py-1 flex items-center shadow-2xl z-50", className)}>
             {/* Main Navigation */}
             {navItems.map((item, index) => (
-                <Tooltip key={item.label}>
-                    <TooltipTrigger asChild>
-                        <a
-                            href={item.href}
-                            className="group flex items-center justify-center"
-                            {...(item.download ? { download: "Gian_Dela_Torre_Resume.pdf", target: "_blank", rel: "noopener noreferrer" } : {})}
-                        >
-                            <DockIcon className="flex items-center justify-center rounded-full hover:bg-primary/10 transition-colors p-2">
+                <DockIcon key={item.label}>
+                    <Tooltip>
+                        <TooltipTrigger asChild>
+                            <a
+                                href={item.href}
+                                aria-label={item.label}
+                                className={cn(
+                                    buttonVariants({ variant: "ghost", size: "icon" }),
+                                    "size-full rounded-full hover:bg-primary/10 flex items-center justify-center"
+                                )}
+                                {...(item.download ? { download: "Gian_Dela_Torre_Resume.pdf", target: "_blank", rel: "noopener noreferrer" } : {})}
+                            >
                                 <item.icon className="size-5 text-primary/90 group-hover:text-primary transition-colors" />
-                            </DockIcon>
-                        </a>
-                    </TooltipTrigger>
-                    <TooltipContent side="top">
-                        <p>{item.label}</p>
-                    </TooltipContent>
-                </Tooltip>
+                            </a>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                            <p>{item.label}</p>
+                        </TooltipContent>
+                    </Tooltip>
+                </DockIcon>
             ))}
 
             <div className="w-[1px] h-6 bg-primary/50 mx-1" />
 
             {/* Social Links */}
             {socialItems.map((item) => (
-                <Tooltip key={item.label}>
-                    <TooltipTrigger asChild>
-                        <a href={item.href} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center">
-                            <DockIcon className="flex items-center justify-center rounded-full hover:bg-primary/10 transition-colors p-2">
+                <DockIcon key={item.label}>
+                    <Tooltip>
+                        <TooltipTrigger asChild>
+                            <a
+                                href={item.href}
+                                aria-label={item.label}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={cn(
+                                    buttonVariants({ variant: "ghost", size: "icon" }),
+                                    "size-full rounded-full hover:bg-primary/10 flex items-center justify-center"
+                                )}
+                            >
                                 <item.icon className="size-5 text-primary/90 group-hover:text-primary transition-colors" />
-                            </DockIcon>
-                        </a>
-                    </TooltipTrigger>
-                    <TooltipContent side="top">
-                        <p>{item.label}</p>
-                    </TooltipContent>
-                </Tooltip>
+                            </a>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                            <p>{item.label}</p>
+                        </TooltipContent>
+                    </Tooltip>
+                </DockIcon>
             ))}
 
             <div className="w-[1px] h-6 bg-primary/50 mx-1" />
 
             {/* Theme Toggle */}
-            <Tooltip>
-                <TooltipTrigger asChild>
-                    <button
-                        onClick={toggleTheme}
-                        className="group flex items-center justify-center transition-all active:scale-95"
-                    >
-                        <DockIcon className="flex items-center justify-center rounded-full hover:bg-primary/10 transition-colors p-2">
-                            {isDarkMode ? (
-                                <Sun className="size-5 text-yellow-500 group-hover:text-yellow-400 transition-colors" />
-                            ) : (
-                                <Moon className="size-5 text-primary/90 group-hover:text-primary transition-colors" />
+            <DockIcon>
+                <Tooltip>
+                    <TooltipTrigger asChild>
+                        <button
+                            onClick={toggleTheme}
+                            aria-label={isDarkMode ? 'Light Mode' : 'Dark Mode'}
+                            className={cn(
+                                buttonVariants({ variant: "ghost", size: "icon" }),
+                                "size-full rounded-full hover:bg-primary/10 transition-all active:scale-95 flex items-center justify-center"
                             )}
-                        </DockIcon>
-                    </button>
-                </TooltipTrigger>
-                <TooltipContent side="top">
-                    <p>{isDarkMode ? 'Light Mode' : 'Dark Mode'}</p>
-                </TooltipContent>
-            </Tooltip>
+                        >
+                            {isDarkMode ? (
+                                <Sun className="size-5 text-yellow-500 hover:text-yellow-400 transition-colors" />
+                            ) : (
+                                <Moon className="size-5 text-primary/90 hover:text-primary transition-colors" />
+                            )}
+                        </button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>{isDarkMode ? 'Light Mode' : 'Dark Mode'}</p>
+                    </TooltipContent>
+                </Tooltip>
+            </DockIcon>
         </Dock>
     )
 }
