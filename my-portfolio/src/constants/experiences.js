@@ -6,7 +6,7 @@ const experiences = [
         title: "Easy Trip",
         about: "AI Travel Planner",
         period: "Jan 2026 - Feb 2026",
-        description: "Developed an application that helps user plan their trip without a hassle. Currently has 450+ registered users and 50+ active users.",
+        description: "Developed an application that helps user plan their trip without a hassle. Currently has 400+ registered users and 30+ active users.",
         projectDescription: "Trip planning is often overwhelming and time-consuming. Most travelers spend hours switching between blogs, maps, and scattered notes that never turn into a clear plan. I built Easy Trip to remove that friction. The platform generates a complete, personalized day-by-day travel itinerary in seconds based on user preferences, helping travelers move from “idea” to “ready-to-go plan” instantly.",
         details: [
             "Saves travelers hours of planning by generating complete itineraries instantly.",
