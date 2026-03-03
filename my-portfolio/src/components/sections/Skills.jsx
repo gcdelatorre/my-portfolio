@@ -22,7 +22,7 @@ export default function Skills() {
                                     <div className="w-5 h-5 flex items-center justify-center shrink-0">
                                         {skill.icon}
                                     </div>
-                                    <span className="text-[11px] md:text-xs font-sans font-bold leading-tight">{skill.name}</span>
+                                    <span className="text-[13px] md:text-[13px] font-sans font-bold leading-tight">{skill.name}</span>
                                 </Badge>
                             ))}
                         </div>

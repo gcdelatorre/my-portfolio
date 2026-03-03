@@ -17,6 +17,7 @@ const experiences = [
         ],
         image: ectrip,
         liveApp: "https://ec-trip.vercel.app/",
+        github: "https://github.com/gcdelatorre/Easy-Trip",
         techStack: ["React", "Express", "Node", "MongoDB", "Tailwind CSS", "JWT", "Google OAuth", "Leaflet", "OpenStreetMap"],
         type: "Website"
     },
@@ -35,6 +36,7 @@ const experiences = [
         ],
         image: trackwise,
         liveApp: "https://smart-trackwise.vercel.app/",
+        github: "https://github.com/gcdelatorre/Smart-Receipt-Scanner_Expense-Tracker",
         techStack: ["React", "Express", "Node", "MongoDB", "Tailwind CSS", "Generative AI", "JWT"],
         type: "Website"
     }

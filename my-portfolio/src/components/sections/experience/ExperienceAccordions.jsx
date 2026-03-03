@@ -10,6 +10,12 @@ import {
 import { ChevronDown } from "lucide-react"
 import { AnimatedContents } from "@/components/animations/AnimatedContents"
 import { useState } from "react"
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+} from "@/components/ui/tooltip"
+import { ExternalLink, Github } from "lucide-react"
 
 import experiences from "@/constants/experiences"
 
@@ -55,12 +61,52 @@ export function ExperienceAccordions() {
                                     {/* Primary Info */}
                                     <div className="flex flex-col flex-1">
                                         <div className="flex justify-between items-start w-full mb-2">
-                                            <div>
+                                            <div className="flex-1 min-w-0 pr-4">
                                                 <h3 className="text-xl text-primary font-sans font-[700] leading-none mb-2">{exp.title}</h3>
                                                 <p className="text-sm md:text-[14px] text-foreground/80 font-sans font-medium">{exp.about}</p>
                                             </div>
-                                            <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold font-sans uppercase tracking-wider">
-                                                {exp.period}
+                                            <div className="flex flex-col items-end gap-2 shrink-0">
+                                                <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold font-sans uppercase tracking-wider">
+                                                    {exp.period}
+                                                </div>
+                                                <div
+                                                    className="flex flex-row gap-3 items-center px-1"
+                                                    onClick={(e) => e.stopPropagation()}
+                                                >
+                                                    <Tooltip>
+                                                        <TooltipTrigger asChild>
+                                                            <a
+                                                                href={exp.liveApp}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="text-primary/60 hover:text-primary transition-colors"
+                                                            >
+                                                                <ExternalLink className="w-4 h-4" />
+                                                            </a>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <p>View Live App</p>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+
+                                                    {exp.github && (
+                                                        <Tooltip>
+                                                            <TooltipTrigger asChild>
+                                                                <a
+                                                                    href={exp.github}
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                    className="text-primary/60 hover:text-primary transition-colors"
+                                                                >
+                                                                    <Github className="w-4 h-4" />
+                                                                </a>
+                                                            </TooltipTrigger>
+                                                            <TooltipContent>
+                                                                <p>View on GitHub</p>
+                                                            </TooltipContent>
+                                                        </Tooltip>
+                                                    )}
+                                                </div>
                                             </div>
                                         </div>
 

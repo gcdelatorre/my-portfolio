@@ -26,7 +26,7 @@ export default function Contact() {
 
                     {/* Heading */}
                     <h2 className="text-4xl md:text-5xl font-sans font-bold text-primary tracking-tighter leading-tight">
-                        Get in Touch
+                        Let's Connect
                     </h2>
 
                     {/* Content paragraph */}
