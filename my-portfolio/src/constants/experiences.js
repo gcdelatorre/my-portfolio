@@ -24,7 +24,7 @@ const experiences = [
     {
         title: "Trackwise",
         about: "Expense Tracker with AI",
-        period: "Aug 2025 - Dec 2025",
+        period: "Nov 2025 - Jan 2026",
         description: "Built an AI-powered expense tracker that helps users track their expenses and income effortlessly by having automatic categorization of transactions.",
         projectDescription: "Tracking expenses manually is a hassle, and most people lose track of where their money goes. Trackwise solves this by leveraging AI to automatically categorize transactions from receipt photos, giving users real-time insights into their spending habits without the manual data entry.",
         details: [
