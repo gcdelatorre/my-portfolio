@@ -25,10 +25,10 @@ export default function Education() {
 
             <div className="flex flex-col gap-3 w-full">
                 {educationData.map((edu, index) => (
-                    <Card key={index} className="w-full p-3.5 bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/80 transition-all duration-300">
+                    <Card key={index} className="w-full p-3.5 bg-card/50 backdrop-blur-sm border-border/20 hover:bg-card/60 transition-all duration-300">
                         <div className="flex items-center gap-4">
                             {/* Logo Container */}
-                            <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-foreground/5 border border-foreground/30 flex items-center justify-center shrink-0 overflow-hidden p-2">
+                            <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-foreground/[0.03] border border-border/20 flex items-center justify-center shrink-0 overflow-hidden p-2">
                                 {edu.logo ? (
                                     <img src={edu.logo} alt={edu.school} className="w-full h-full object-contain" />
                                 ) : (

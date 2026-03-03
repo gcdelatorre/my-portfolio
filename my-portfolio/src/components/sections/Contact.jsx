@@ -14,7 +14,7 @@ export default function Contact() {
 
     return (
         <div className="flex flex-col items-center justify-center w-full pt-16">
-            <Card className="w-full max-w-2xl p-6 md:p-6 border-border/50 bg-card/50 backdrop-blur-sm flex flex-col items-center justify-center text-center gap-6 relative overflow-hidden">
+            <Card className="w-full max-w-2xl p-6 md:p-6 border-border/20 bg-card/50 backdrop-blur-sm flex flex-col items-center justify-center text-center gap-6 relative overflow-hidden">
                 {/* Subtle background glow effect if desired */}
                 <div className="absolute inset-0 bg-primary/5 pointer-events-none" />
 
